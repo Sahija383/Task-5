@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Slay the Vibe - Get personalized fashion recommendations for any occasion">
+    <meta name="keywords" content="fashion, outfit, style, recommendation, clothing">
+    <title>Slay the Vibe – Let Us Dress You Right</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="fashion-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>✨ Slay the Vibe</h1>
+                </div>
+                <div class="nav-subtitle">
+                    <p>Let Us Dress You Right</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Slay the Vibe</h2>
+                <p class="hero-subtitle">Let Us Dress You Right</p>
+                <p class="hero-description">Get personalized outfit recommendations for any occasion. No more fashion dilemmas!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Style Form Section -->
+            <section class="form-section" id="form-section">
+                <h2 class="section-title">Tell Us About Your Style</h2>
+                <p class="section-description">Fill out the form below to get personalized outfit recommendations</p>
+                
+                <form class="style-form" id="style-form">
+                    <div class="form-grid">
+                        <!-- Gender -->
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="unisex">Unisex</option>
+                            </select>
+                        </div>
+
+                        <!-- Height & Body Type -->
+                        <div class="form-group">
+                            <label for="height">Height</label>
+                            <select id="height" name="height" required>
+                                <option value="">Select Height</option>
+                                <option value="petite">Petite (Under 5'3")</option>
+                                <option value="average">Average (5'3" - 5'7")</option>
+                                <option value="tall">Tall (Over 5'7")</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bodyType">Body Type</label>
+                            <select id="bodyType" name="bodyType" required>
+                                <option value="">Select Body Type</option>
+                                <option value="hourglass">Hourglass</option>
+                                <option value="pear">Pear</option>
+                                <option value="apple">Apple</option>
+                                <option value="rectangle">Rectangle</option>
+                                <option value="inverted-triangle">Inverted Triangle</option>
+                            </select>
+                        </div>
+
+                        <!-- Skin Tone -->
+                        <div class="form-group">
+                            <label for="skinTone">Skin Tone</label>
+                            <select id="skinTone" name="skinTone" required>
+                                <option value="">Select Skin Tone</option>
+                                <option value="fair">Fair</option>
+                                <option value="light">Light</option>
+                                <option value="medium">Medium</option>
+                                <option value="olive">Olive</option>
+                                <option value="dark">Dark</option>
+                                <option value="deep">Deep</option>
+                            </select>
+                        </div>
+
+                        <!-- Preferred Style -->
+                        <div class="form-group">
+                            <label for="preferredStyle">Preferred Style</label>
+                            <select id="preferredStyle" name="preferredStyle" required>
+                                <option value="">Select Style</option>
+                                <option value="modern">Modern</option>
+                                <option value="traditional">Traditional</option>
+                                <option value="indo-western">Indo-Western</option>
+                                <option value="casual">Casual</option>
+                                <option value="elegant">Elegant</option>
+                                <option value="bohemian">Bohemian</option>
+                                <option value="minimalist">Minimalist</option>
+                                <option value="vintage">Vintage</option>
+                            </select>
+                        </div>
+
+                        <!-- Occasion -->
+                        <div class="form-group">
+                            <label for="occasion">Occasion</label>
+                            <select id="occasion" name="occasion" required>
+                                <option value="">Select Occasion</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="office">Office</option>
+                                <option value="date">Date</option>
+                                <option value="party">Party</option>
+                                <option value="interview">Interview</option>
+                                <option value="festive">Festive</option>
+                                <option value="casual-outing">Casual Outing</option>
+                                <option value="formal-event">Formal Event</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <span>✨ Get My Outfits</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2 class="section-title">Your Personalized Outfits</h2>
+                    <p class="section-description">Here are 7 stunning outfit combinations perfect for your occasion</p>
+                    <button class="new-search-btn" id="new-search-btn">Start New Search</button>
+                </div>
+                
+                <div class="outfits-grid" id="outfits-grid">
+                    <!-- Outfit cards will be dynamically generated here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>✨ Slay the Vibe</h4>
+                    <p>Your personal fashion stylist</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#form-section">Get Recommendations</a></li>
+                        <li><a href="#" onclick="scrollToTop()">Back to Top</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Style Tips</h4>
+                    <ul>
+                        <li>Confidence is your best accessory</li>
+                        <li>Dress for the occasion</li>
+                        <li>Comfort meets style</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Slay the Vibe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="fashion-script.js"></script>
+</body>
+</html>
